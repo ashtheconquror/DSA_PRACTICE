@@ -1,31 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
-
-// Problem Statement
-/*
-
-*/
-
-// Small Observations
-/*
-
-*/
-
-void solve() {
-  
-}
-
-int32_t main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int t; cin >> t;
-    while (t--) {
-        solve();
-    }
-    return 0;
-}class Solution {
+class Solution {
 public:
 
 //Unoptimized apporach
@@ -59,6 +35,11 @@ public:
 
         return false;
 
-
         }
 };
+int main() {
+    Solution s;
+    vector<int> nums = {1, 2, 3, 4, 5, 6};
+    int k = 3;
+    cout << (s.hasIncreasingSubarrays(nums, k) ? "true" : "false") << endl; 
+}
