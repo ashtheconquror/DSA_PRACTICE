@@ -20,22 +20,21 @@ struct TreeNode {
 
 class Solution {
 public:
-//This problem is an easier version of leetcode 3229
-    int minNumberOperations(vector<int>& target) {
-        long long res = 0;
-        int curr = 0, prev = 0;
-        for(int i = 0; i < target.size(); i++) {
-            int curr = target[i];
-
-            if(curr > prev) {
-                res += (curr - prev);
-            }
-
-            prev = curr;
+    vector<int> getSneakyNumbers(vector<int>& nums) {
+        vector<int> ans;
+        unordered_map<int,int>mp;
+        for(auto x: nums) {
+            mp[x]++;
         }
-        return res;
+        for(auto i: mp) {
+            if(i.second > 1)
+                ans.push_back(i.first);
+        }
+
+        return ans;
     }
 };
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
