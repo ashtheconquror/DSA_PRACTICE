@@ -21,7 +21,7 @@ struct TreeNode {
 class Solution {
 public:
     int largestMagicSquare(vector<vector<int>>& grid) {
-        int rows = grid.size();
+        int rows = grid.size
         int cols = grid[0].size();
 
         //Row wise prefix sum
