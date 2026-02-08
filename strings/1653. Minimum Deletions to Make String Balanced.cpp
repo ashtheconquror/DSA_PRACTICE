@@ -17,7 +17,7 @@ struct TreeNode {
     TreeNode(int x): val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode* l, TreeNode* r): val(x), left(l), right(r) {}
 };
-
+//Approach - 1
 class Solution {
 public:
     int minimumDeletions(string s) {
@@ -35,6 +35,7 @@ public:
         return cnt;
     }
 };
+//Approach - 2
 
 int main() {
     ios::sync_with_stdio(false);
