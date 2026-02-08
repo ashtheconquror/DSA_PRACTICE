@@ -96,6 +96,32 @@ public:
     }
 };
 
+//Approach - 4 
+class Solution {
+public:
+    // time complexity = O(n) .. but space complexity = O(1)
+    int minimumDeletions(string s) {
+        int n = s.size();
+
+        int rightcnta = 0;
+        for (int i = n - 1; i >= 0; i--) {
+            if (s[i] == 'a') {
+                rightcnta++;
+            }
+        }
+        int cnt = INT_MAX;
+        int leftcntb = 0;
+        for (int i = 0; i < n; i++) {
+            if (s[i] == 'a')
+                rightcnta--;
+            cnt = min(cnt, leftcntb + rightcnta);
+            if (s[i] == 'b')
+                leftcntb++;
+        }
+        return cnt;
+    }
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
